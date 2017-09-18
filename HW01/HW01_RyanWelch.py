@@ -6,7 +6,7 @@
 gradesList = []
 frequency = []
 
-# For loop in order to assign values to letterGrades and append the letterGrades to the array gradesList
+# For loop in order to assign values to letterGrades and append the letterGrades to the list gradesList
 for letters in range(10):
     letterGrades = input('Enter in a letter grade: ')
     gradesList.append(letterGrades)
@@ -31,7 +31,7 @@ frequency.append(letterGradeD)
 letterGradeF = gradesList.count('F')
 frequency.append(letterGradeF)
 
-# Prints out the frequency of the letter grades in the array gradesList
+# Prints out the frequency of the letter grades in the list gradesList
 print('\nProblem 2 answers:\n' + str(frequency) + '\n')
 
 # --------------------------------------------------------------------------------------------------
@@ -44,6 +44,6 @@ tiny_dogs = dog_breeds[-1]
 print('C. ' + tiny_dogs + '\n')
 
 if 'Persian' in dog_breeds:
-    print('D. ' + str(True) + ', Persian is in the array dog_breeds.')
+    print('D. ' + str(True) + ', Persian is in the list dog_breeds.')
 else:
-    print('D. ' + str(False) + ', Persian is not in the array dog_breeds.')
+    print('D. ' + str(False) + ', Persian is not in the list dog_breeds.')
