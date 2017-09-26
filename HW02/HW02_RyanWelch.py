@@ -480,6 +480,7 @@ if __name__ == '__main__':
     t.reset()
     
     # 4.4
+    # Change the drawA(t) method to drawB(t) etc
     drawA(t)
     t.reset()
     
