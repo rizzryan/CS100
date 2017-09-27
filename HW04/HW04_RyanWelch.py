@@ -51,21 +51,31 @@ if __name__ == '__main__':
     
     print('End of firstLast() function.\n\nBeginning of popMin() function.\n')
     
-    ltInputs = int(input('How many integers do you want to enter? '))
+    popMinInputs = int(input('How many integers do you want to enter? '))
     
-    lt = []
+    pM = []
     
-    for numbers in range(ltInputs):
-        ltNumber = int(input('Enter in a number: '))
-        lt.append(ltNumber)
+    for numbers in range(popMinInputs):
+        pMNumber = int(input('Enter in a number: '))
+        pM.append(pMNumber)
     
-    print(lt)
+    print(pM)
     
-    popMin(lt)
+    popMin(pM)
     
     print('End of popMin() function.\n\nBeginning of inOrder() function.\n')
     
-    inOrder(lt)
+    inOrderInputs = int(input('How many integers do you want to enter? '))
+    
+    iO = []
+    
+    for numbers in range(inOrderInputs):
+        iONumber = int(input('Enter in a number: '))
+        iO.append(iONumber)
+    
+    print(iO)
+    
+    inOrder(iO)
     
     print('End of inOrder() function.\n\nBeginning of multiCount() function.\n')
     
