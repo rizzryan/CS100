@@ -1,54 +1,78 @@
 # Ryan Welch
 # CS100 2017F Section 105
 # HW 06, September 21, 2017
-# 8.4 solutions
-def any_lowercase1(s):
-    # Essentially means for character in string
-    for c in s:
-        if c.islower():
-            # True will be returned when the first instance of the character in the string is lowercase.
-            return True
-        else:
-            # False will be returned when the first instance of the character in the string is not lowercase.
-            return False
 
-def any_lowercase2(s):
-    # Essentially means for character in string
-    for c in s:
-        if 'c'.islower():
-            # True will always be returned because 'c' is always lowercase
-            return 'True'
-        else:
-            return 'False'
-def any_lowercase3(s):
-    # Essentially means for character in string
-    for c in s:
-        # Assigning True or False to the variable flag based on whether or not the last character is lowercaseor not.
-        flag = c.islower()
-    return flag
+# Problem 2: 8.4
+s = 'Monty Python'
+fruit = 'banana'
 
-def any_lowercase4(s):
+# Problem 3: 8.8
+word = 'banana'
+newWord = word.upper()
+
+# Finds the first index of the parameter
+index = word.find('a')
+name = 'bob'
+
+# Problem 4: 8.11
+def isReverse(word1, word2):
+    if len(word1) != len(word2):
+        return False
+    i = 0
+    j = len(word2) - 1
     
-    flag = False
-    # Essentially means for character in string
-    for c in s:
-        # flag is updated to True or False based on the capitalization of the current iteration
-        flag = flag or c.islower()
-    # True or False is returned based on the last character in the string
-    return flag
-
-def any_lowercase5(s):
-    # Essentially means for character in string
-    for c in s:
-        # If not True or False based on the evaluation of the capitalization of the current character
-        # Default boolean value is True
-        if not c.islower():
+    # Fix was making j less than or equal to 0
+    while j >= 0:
+        print(i, j)
+        
+        if word1[i] != word2[j]:
             return False
-    # True or False is returned based on the capitalization of the first character in the string
+        
+        i = i + 1
+        j = j - 1
+    
     return True
 
-print(any_lowercase1('StRinG'))
-#print(any_lowercase2('StoriEs'))
-#print(any_lowercase3('Steak'))
-print(any_lowercase4('SCHOOL'))
-print(any_lowercase5('sdhsdk'))
+# Problem 5
+def uniqueCharacters(s):
+    uniqueCharacterList = []
+    
+    for characters in s[::]:
+        if characters not in uniqueCharacterList:
+            uniqueCharacterList.append(characters)
+    
+    return uniqueCharacterList
+
+# Problem 6
+def numUniqueCharacters(s):
+    print('Number of unique letters: ' + str(len(uniqueCharacters(s))))
+
+
+
+if __name__ == '__main__':
+    print('Beginning of 8.4\n')
+    print(s[0:5])
+    print(s[6:12])
+    print(fruit[:3])
+    print(fruit[3:])
+    print(fruit[3:3])
+
+    # fruit[:] is the whole string
+    print(fruit[:])
+    print('\nEnd of 8.4\n\nBeginning of 8.8')
+
+    print(newWord)
+    print(index)
+    # Finds the first index of the parameter
+    print(word.find('na'))
+    # Finds the first index of the parameter specified at the starting point
+    print(word.find('na', 3))
+    # Finds the first index of the parameter specified at the starting point and going up to the ending point
+    print(name.find('b', 1, 2))
+    print('\nEnd of 8.8\n\nBeginning of 8.11\n')
+
+    print(isReverse('pots', 'stop'))
+    print('\nEnd of 8.11\n')
+
+    print('Unique letters: ' + str(uniqueCharacters('Abracadabra')))
+    numUniqueCharacters('Abracadabra')
