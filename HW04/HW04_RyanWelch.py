@@ -27,12 +27,14 @@ def inOrder(lst):
         
 def multiCount(target, mask):
     # returns a list of integers where each integer is equal to the count of the corresponding element at that index in mask within the elements of target.
+    targetList = []
     
     if len(target) == 0 or len(mask) == 0:
         print('You have not entered in a word or list.')
     else:
         for letters in range(len(mask)):
-            print(target.count(mask[letters]))
+            targetList.append(target.count(mask[letters]))
+        return targetList
     
 if __name__ == '__main__':
     print('Beginning of firstLast() function.\n')

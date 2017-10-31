@@ -464,37 +464,37 @@ def inscribedHexagon(t, sideLen):
 if __name__ == '__main__':
     # Turtle object instantiated
     t = turtle.Turtle()
-    
-    # 4.2
-    r = float(input('Enter in a radius: '))
-    iA = float(input('Enter in an inner angle in degrees: '))
-    p = int(input('Enter in the number of petals:'))
-    
-    flower(t, r, iA, p)
-    t.reset()
-    
-    # 4.3
-    length = int(input('Enter in the length of the sides: '))
-    n = int(input('Enter in the number of segments: '))
-    compositeShape(t, n, length)
-    t.reset()
-    
-    # 4.4
-    # Change the drawA(t) method to drawB(t) etc
-    drawA(t)
-    t.reset()
-    
-    # 4.5
-    lines = int(input('Enter in the number of lines to be drawn: '))
-    
-    spiral(t, lines)
-    t.reset()
-    
-    # Two Circles
-    radius = int(input('Enter in a radius: '))
-    
-    twoCircles(t, radius)
-    t.reset()
+#    
+#    # 4.2
+#    r = float(input('Enter in a radius: '))
+#    iA = float(input('Enter in an inner angle in degrees: '))
+#    p = int(input('Enter in the number of petals:'))
+#    
+#    flower(t, r, iA, p)
+#    t.reset()
+#    
+#    # 4.3
+#    length = int(input('Enter in the length of the sides: '))
+#    n = int(input('Enter in the number of segments: '))
+#    compositeShape(t, n, length)
+#    t.reset()
+#    
+#    # 4.4
+#    # Change the drawA(t) method to drawB(t) etc
+#    drawA(t)
+#    t.reset()
+#    
+#    # 4.5
+#    lines = int(input('Enter in the number of lines to be drawn: '))
+#    
+#    spiral(t, lines)
+#    t.reset()
+#    
+#    # Two Circles
+#    radius = int(input('Enter in a radius: '))
+#    
+#    twoCircles(t, radius)
+#    t.reset()
     
     # Inscribed Hexagon
     sideLen = int(input('Enter in a side length of the hexagon: '))

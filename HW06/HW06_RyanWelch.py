@@ -47,8 +47,6 @@ def uniqueCharacters(s):
 def numUniqueCharacters(s):
     print('Number of unique letters: ' + str(len(uniqueCharacters(s))))
 
-
-
 if __name__ == '__main__':
     print('Beginning of 8.4\n')
     print(s[0:5])
