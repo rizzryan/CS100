@@ -17,20 +17,20 @@ def log(filename):
 
 # Problem 3
 def lineOccurences(filename):
-    f = open(fileName)
+    f = open(fileName, 'r')
     wordDict = {}
     wordList = []
     numLine = []
-    fileIndex = len(f.readline()) - 1
+    fileIndex = len(f.readlines())
+
+    line = f.readlines()
+    print(line)
 
     for word in f.read().split():
         wordList.append(word.lower().replace(',', ''))
 
-    # print(len(f.readlines()))
-    print(fileIndex)
-
-    # for words in range(len(wordList)):
-        # print(words)
+    for nums in range(fileIndex):
+        numLine.append(nums)
 
     f.close()
 
