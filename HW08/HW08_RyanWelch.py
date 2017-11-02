@@ -15,23 +15,28 @@ def log(filename):
             break
     f.close()
 
-# Problem 3 INCOMPLETE
+# Problem 3
 def lineOccurences(filename):
-    f = open(fileName)
-    fR = f.readlines()
-    for l in fR:
-        index = len(l) - 1
-        for i in range(index):
-            word = l
-            k = word.lower().replace(',', '').replace('\n', '')
-            val = 0
-            d = dict({k:index})
-            index -= 1
-    print(d)
+    f = open(fileName, 'r')
+    d = {}
+    val = 0
+
+    for l in f:
+        wL = l.split()
+
+        for words in wL:
+            stripped = words.lower().strip(',')
+
+            if stripped not in d:
+                d[stripped] = [val]
+            else:
+                d[stripped].append(val)
+        val += 1
+    return d
 
     f.close()
 
 
 if __name__ == '__main__':
     fileName = input('Enter in a filename: ')
-    lineOccurences(fileName)
+    print(lineOccurences(fileName))
