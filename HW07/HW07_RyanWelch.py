@@ -1,32 +1,37 @@
+# Ryan Welch
+# CS100 2017F Section 105
+# HW 07, November 2nd, 2017
+
+import random
+
 def combineLists(k, v):
-    stuffList = []
-    itemList = []
-    possesionList = []
-    d1 = dict()
+    d = {}
+    for elems in range(len(k)):
+        if k[elems] in d.keys():
+            d[k[elems]].append(v[elems])
+        else:
+            d[k[elems]] = [v[elems]]
+    print(d)
 
-    for elems in range(len(v)):
-        stuffList.append(k[elems] + ',' + v[elems])
+def who(ledger, item):
+    names = ledger.keys()
+    vals = ledger.values()
+    namesList = []
+    valsList = []
 
-    for items in stuffList:
-        possesionList.append(items.split(',')[0] + ' : ' + items.split(',')[1])
-        # if items.count(items.split(',')[0]) > 0 and
+    for n in names:
+        namesList.append(n)
 
-    # print(sorted(possesionList))
-    for items in sorted(possesionList):
-        d = dict()
-        d.update({items.split(' : ')[0]:items.split(' : ')[1]})
+    for v in vals:
+        valsList.append(v)
 
-        d1.update(d)
-
-        print(d1)
-
-
-
-
+    print(namesList[random.randint(0, len(namesList) - 1)])
 
 
 if __name__ == '__main__':
     peeps = ['Trevor', 'Joey', 'Joey', 'Trevor', 'Joey']
     stuff = ['Pencil', 'Notebook', 'Laptop', 'Speakers', 'Calculator']
+    d = {'Joe' : ['Soda' , 'Candy'], 'Alex' : ['Soda', 'Pretzels']}
 
-    combineLists(peeps, stuff)
+    # combineLists(peeps, stuff)
+    who(d, 'Candy')

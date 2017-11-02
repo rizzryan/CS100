@@ -1,3 +1,7 @@
+# Ryan Welch
+# CS100 2017F Section 105
+# Lab 02, November 2nd, 2017
+
 import datetime
 import random
 
@@ -23,7 +27,7 @@ def guestbook(file, option):
 
         name = input('What is your name? ')
         message = input('Enter in your message: ')
-        
+
         currentDate = datetime.datetime.now().strftime('%I:%M%p on %B %d %Y')
 
         f.write(currentDate + ',' + name + ',' + message)

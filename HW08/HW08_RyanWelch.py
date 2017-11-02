@@ -1,6 +1,6 @@
 # Ryan Welch
 # CS100 2017F Section 105
-# HW 08, October 27, 2017
+# HW 08, November 2nd, 2017
 
 # Problem 2
 def log(filename):
@@ -15,26 +15,22 @@ def log(filename):
             break
     f.close()
 
-# Problem 3
+# Problem 3 INCOMPLETE
 def lineOccurences(filename):
-    f = open(fileName, 'r')
-    wordDict = {}
-    wordList = []
-    numLine = []
-    fileIndex = len(f.readlines())
-
-    line = f.readlines()
-    print(line)
-
-    for word in f.read().split():
-        wordList.append(word.lower().replace(',', ''))
-
-    for nums in range(fileIndex):
-        numLine.append(nums)
+    f = open(fileName)
+    fR = f.readlines()
+    for l in fR:
+        index = len(l) - 1
+        for i in range(index):
+            word = l
+            k = word.lower().replace(',', '').replace('\n', '')
+            val = 0
+            d = dict({k:index})
+            index -= 1
+    print(d)
 
     f.close()
 
-    # print(numLine)
 
 if __name__ == '__main__':
     fileName = input('Enter in a filename: ')
