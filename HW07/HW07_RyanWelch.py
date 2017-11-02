@@ -14,18 +14,13 @@ def combineLists(k, v):
     print(d)
 
 def who(ledger, item):
-    names = ledger.keys()
-    vals = ledger.values()
-    namesList = []
-    valsList = []
+    numItems = len(ledger)
+    name = []
 
-    for n in names:
-        namesList.append(n)
-
-    for v in vals:
-        valsList.append(v)
-
-    print(namesList[random.randint(0, len(namesList) - 1)])
+    for items in ledger:
+        if item in ledger[items]:
+            name.append(items)
+    print(name)
 
 
 if __name__ == '__main__':
