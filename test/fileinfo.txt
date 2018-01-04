@@ -1,0 +1,21 @@
+For word:
+f = file.read() -> returns string of everything in the file
+f.split() -> splits into a list of all the words as separate elements
+
+for lines:
+lCount = 0
+f = file.read()
+lines = f.split('\n')
+
+for line in lines:
+  lCount += 1
+
+for characters:
+cCount = 0
+f = file.read()
+
+for char in f:
+  if char == '\n':
+    continue
+  else:
+    cCount += 1
